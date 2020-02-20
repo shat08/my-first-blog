@@ -21,9 +21,9 @@
 
 <header>
 <div class="inner">
-<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="SAMPLE COMPANY"></a></h1>
+<h1 id="logo"><a href="index.html"><img src="{% static 'templates2/images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
 <div id="contact">
-<p class="tel">TEL:00-0000-0000<span>受付：00:00〜00:00　定休日：水曜日</span></p>
+<!-- <p class="tel">TEL:00-0000-0000<span>受付：00:00〜00:00　定休日：水曜日</span></p> -->
 </div>
 </div>
 </header>
@@ -32,9 +32,9 @@
 <nav id="menubar">
 <ul class="inner">
 <li class="current"><a href="index.html">ホーム<span>HOME</span></a></li>
-<li><a href="company.html">会社概要<span>COMPANY</span></a></li>
+<!-- <li><a href="company.html">会社概要<span>COMPANY</span></a></li>
 <li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
-<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li>
+<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
 <li><a href="link.html">リンク<span>STAFF</span></a></li>
 <li><a href="contact.html">お問い合わせ<span>CONTACT</span></a></li>
 </ul>
@@ -43,9 +43,9 @@
 <nav id="menubar-s" style="display: none;">
 <ul>
 <li><a href="index.html">ホーム<span>HOME</span></a></li>
-<li><a href="company.html">会社概要<span>COMPANY</span></a></li>
+<!-- <li><a href="company.html">会社概要<span>COMPANY</span></a></li>
 <li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
-<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li>
+<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
 <li><a href="link.html">リンク<span>STAFF</span></a></li>
 <li><a href="contact.html">お問い合わせ<span>CONTACT</span></a></li>
 </ul>
@@ -120,23 +120,26 @@
 <div id="sub">
 
 <nav>
-<h2>Contents</h2>
+<h2>セ・リーグ</h2>
 <ul class="submenu">
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">巨人</a></li>
+<li><a href="#">DeNA</a></li>
+<li><a href="#">阪神</a></li>
+<li><a href="#">広島</a></li>
+<li><a href="#">中日</a></li>
+<li><a href="#">ヤクルト</a></li>
 </ul>
 </nav>
 
 <nav>
+<h2>パ・リーグ</h2>
 <ul class="submenu">
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
+<li><a href="#">西武</a></li>
+<li><a href="#">ソフトバンク</a></li>
+<li><a href="#">楽天</a></li>
+<li><a href="#">ロッテ</a></li>
+<li><a href="#">日本ハム</a></li>
+<li><a href="#">オリックス</a></li>
 </ul>
 </nav>
 
@@ -146,7 +149,7 @@
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル<span class="newicon">NEW</span></h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -154,7 +157,7 @@
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg'%}" alt="写真の説明"></figure>
 <h4>製品タイトル</h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -162,7 +165,7 @@
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル</h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -192,7 +195,7 @@ TEL：03-0000-0000<br>
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル<span class="newicon">NEW</span></h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -200,7 +203,7 @@ TEL：03-0000-0000<br>
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル</h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -208,7 +211,7 @@ TEL：03-0000-0000<br>
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル</h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -216,7 +219,7 @@ TEL：03-0000-0000<br>
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル</h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -224,7 +227,7 @@ TEL：03-0000-0000<br>
 
 <div class="list">
 <a href="service2.html">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
 <h4>製品タイトル</h4>
 <p>サンプルテキスト。サンプルテキスト。</p>
 </a>
@@ -244,8 +247,8 @@ TEL：03-0000-0000<br>
 </nav>
 
 <p>
-<a href="recruit.html"><img src="images/banner1.jpg" alt="採用情報" class="pc"></a>
-<a href="recruit.html"><img src="images/banner1_sh.jpg" alt="採用情報" class="sh"></a>
+<a href="recruit.html"><img src="{% static 'templates2/images/banner1.jpg' %}" alt="採用情報" class="pc"></a>
+<a href="recruit.html"><img src="{% static 'templates2/images/banner1_sh.jpg' %}" alt="採用情報" class="sh"></a>
 </p>
 <p>上のバナー画像は、801px以上の端末と800px以下とで画像２種類が切り替わります。<br>
 <a href="company.html#banner">詳しい説明はこちら。</a></p>

@@ -307,6 +307,7 @@ header #logo {
 #sub .submenu li a,
 #side .submenu li a {
 	text-decoration: none;display: block;
+	float: center;
 	padding: 0 10px;	/*上下、左右のボックス内の余白*/
 	border-top: 1px solid #666;
 	border-left: 1px solid #666;

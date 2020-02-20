@@ -51,9 +51,10 @@ header {
 }
 /*ロゴ画像*/
 header #logo {
-	width: 250px;	/*ロゴ画像の幅*/
+	width: 400px;	/*ロゴ画像の幅*/
 	float: left;	/*左に回り込み*/
-	margin-top: 34px;	/*ロゴの上にあける余白。上下のバランスをここで調整して下さい。*/
+	margin-top: 20px;	/*ロゴの上にあける余白。上下のバランスをここで調整して下さい。*/
+	text-align: center;
 }
 
 /*ヘッダー右側の電話番号ブロック
@@ -86,7 +87,7 @@ header #logo {
 /*メニュー１個あたりの設定*/
 #menubar li {
 	float: left;	/*左に回り込み*/
-	width: 16.66%;	/*メニュー幅（100÷6個=16.66%）　もし４個にするなら100÷4=25%になる。*/
+	width: 33.33%;	/*メニュー幅（100÷6個=16.66%）　もし４個にするなら100÷4=25%になる。*/
 }
 #menubar li a {
 	display:  block;text-decoration: none;
@@ -307,7 +308,7 @@ header #logo {
 #sub .submenu li a,
 #side .submenu li a {
 	text-decoration: none;display: block;
-	float: center;
+	text-align: center;
 	padding: 0 10px;	/*上下、左右のボックス内の余白*/
 	border-top: 1px solid #666;
 	border-left: 1px solid #666;

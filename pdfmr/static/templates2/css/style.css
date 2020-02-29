@@ -51,10 +51,9 @@ header {
 }
 /*ロゴ画像*/
 header #logo {
-	width: 150 px;	/*ロゴ画像の幅*/
+	width: 250 px;	/*ロゴ画像の幅*/
 	float: left;	/*左に回り込み*/
 	margin-top: 20px;	/*ロゴの上にあける余白。上下のバランスをここで調整して下さい。*/
-	text-align: center;
 }
 
 /*ヘッダー右側の電話番号ブロック
@@ -433,11 +432,20 @@ footer .pr {display: block;font-size: 80%;}
 }
 /*ta1の左側ボックス*/
 .ta1 th {
-	width: 140px;	/*幅*/
+	width: 100px;	/*幅*/
 	text-align: center;	/*センタリング*/
 	font-weight: normal;
 }
-
+th.p_num{
+	width: 20px;
+	text-align: center;
+	font-weight: normal;
+}
+th.p_name{
+	width: 80px;
+	text-align: center;
+	font-weight: normal;
+}
 /*inputボタン
 ---------------------------------------------------------------------------*/
 #main input[type="submit"].btn,
@@ -644,12 +652,16 @@ body {
 /*テーブル
 ---------------------------------------------------------------------------*/
 /*テーブル内の左側*/
-.ta1 th {
+
+
+.ta1 th{
 	width: 100px;
 	padding: 5px;
 }
+
 /*テーブル内の右側*/
-.ta1 td {
+
+.ta1 td{
 	width: auto;
 	padding: 5px;
 }

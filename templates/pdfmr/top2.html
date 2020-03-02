@@ -3,7 +3,7 @@
 <html lang="ja"><head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>プロ野球選手 応援歌</title>
+<title>SHAT website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
@@ -35,8 +35,8 @@
 <!-- <li><a href="company.html">会社概要<span>COMPANY</span></a></li>
 <li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
 <li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
-<li><a href="{% static 'templates2/link.html' %}">リンク<span>LINK</span></a></li>
-<li><a href="{% static 'templates2/contact.html' %}">サイトポリシー<span>SITE POLICY</span></a></li>
+<li><a href="{% static 'templates2/link.html' %}">リンク<span>STAFF</span></a></li>
+<li><a href="{% static 'templates2/contact.html' %}">お問い合わせ<span>CONTACT</span></a></li>
 </ul>
 </nav>
 <!--小さな端末用（800px以下端末）メニュー-->
@@ -46,8 +46,8 @@
 <!-- <li><a href="company.html">会社概要<span>COMPANY</span></a></li>
 <li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
 <li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
-<li><a href="{% static 'templates2/link.html' %}">リンク<span>LINK</span></a></li>
-<li><a href="{% static 'templates2/contact.html' %}">サイトポリシー<span>SITE POLICY</span></a></li>
+<li><a href="{% static 'templates2/link.html' %}">リンク<span>STAFF</span></a></li>
+<li><a href="{% static 'templates2/contact.html' %}">お問い合わせ<span>CONTACT</span></a></li>
 </ul>
 </nav>
 
@@ -69,10 +69,9 @@
 <section id="new">
 <h2>更新情報・お知らせ</h2>
 <dl>
-	<dt>2019/3/2</dt>
-	<dd>全球団応援歌歌詞の投稿完了。<span class="newicon">NEW</span></dd>
-	<dt>2019/2/16</dt>
-	<dd>ホームページ作成開始。</dd>
+<dt>2019/2/16</dt>
+<dd>ホームページ作成開始。<span class="newicon">NEW</span></dd>
+
 </dl>
 <p class="r">»&nbsp;<a href="#">過去ログ</a></p>
 </section>
@@ -89,24 +88,24 @@
 <nav>
 <h2>セ・リーグ</h2>
 <ul class="submenu">
-<li><a href="giants.html">巨人</a></li>
-<li><a href="baystars.html">DeNA</a></li>
-<li><a href="tigers.html">阪神</a></li>
-<li><a href="carp.html">広島</a></li>
-<li><a href="dragons.html">中日</a></li>
-<li><a href="swallows.html">ヤクルト</a></li>
+	<li><a href="{% static 'templates2/giants.html' %}">巨人</a></li>
+	<li><a href="{% static 'templates2/baystars.html' %}">DeNA</a></li>
+	<li><a href="{% static 'templates2/tigers.html' %}">阪神</a></li>
+	<li><a href="{% static 'templates2/carp.html' %}">広島</a></li>
+	<li><a href="{% static 'templates2/dragons.html' %}">中日</a></li>
+	<li><a href="{% static 'templates2/swallows.html' %}">ヤクルト</a></li>
 </ul>
 </nav>
 
 <nav>
 <h2>パ・リーグ</h2>
 <ul class="submenu">
-<li><a href="lions.html">西武</a></li>
-<li><a href="softbank.html">ソフトバンク</a></li>
-<li><a href="eagles.html">楽天</a></li>
-<li><a href="marines.html">ロッテ</a></li>
-<li><a href="fighters.html">日本ハム</a></li>
-<li><a href="buffaloes.html">オリックス</a></li>
+<li><a href="#">西武</a></li>
+<li><a href="#">ソフトバンク</a></li>
+<li><a href="#">楽天</a></li>
+<li><a href="#">ロッテ</a></li>
+<li><a href="#">日本ハム</a></li>
+<li><a href="#">オリックス</a></li>
 </ul>
 </nav>
 
@@ -281,7 +280,7 @@ TEL：03-0000-0000<br>
 <!--/footermenu-->
 
 <div id="copyright">
-<small>Copyright© <a href="index.html">プロ野球選手 応援歌</a> All Rights Reserved.</small>
+<small>Copyright© <a href="index.html">SAMPLE COMPANY</a> All Rights Reserved.</small>
 <span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </div>
 

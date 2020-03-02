@@ -175,6 +175,24 @@ header #logo {
 #main .gia {
 	border-bottom: 5px solid #f1b306;
 }
+#main .lio {
+	border-bottom: 5px solid #076e9e;
+}
+#main .eag {
+	border-bottom: 5px solid #b134039c;
+}
+#main .fig {
+	border-bottom: 5px solid #97d7e79c;
+}
+#main .buf {
+	border-bottom: 5px solid #0b098adc;
+}
+#main .mar {
+	border-bottom: 5px solid #29282c15;
+}
+#main .haw {
+	border-bottom: 5px solid #f1da09e0;
+}
 /*mainコンテンツのh3タグ設定*/
 #main h3 {
 	clear: both;

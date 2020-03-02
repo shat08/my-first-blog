@@ -158,7 +158,22 @@ header #logo {
 	font-size: 16px;	/*文字サイズ*/
 	background: #3c3c3c;	/*背景色（古いブラウザ用）*/
 	background: linear-gradient(#5e5e5e, #3c3c3c 49%, #191919 50%);		/*グラデーション*/
-	border-bottom: 3px solid #2799b5;		/*枠線の幅、線種、色*/
+	border-bottom: 5px solid #2799b5;		/*枠線の幅、線種、色*/
+}
+#main .dra {
+	border-bottom: 5px solid #061ef8;
+}
+#main .car {
+	border-bottom: 5px solid #f80606;
+}
+#main .swa {
+	border-bottom: 5px solid #166e05;
+}
+#main .tig {
+	border-bottom: 5px solid #f5dd0c;
+}
+#main .gia {
+	border-bottom: 5px solid #f1b306;
 }
 /*mainコンテンツのh3タグ設定*/
 #main h3 {

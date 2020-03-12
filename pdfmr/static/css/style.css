@@ -687,7 +687,16 @@ body {
 ---------------------------------------------------------------------------*/
 /*テーブル内の左側*/
 
-
+th.p_num{
+	width: 20px;
+	text-align: center;
+	font-weight: normal;
+}
+th.p_name{
+	width: 100px;
+	text-align: center;
+	font-weight: normal;
+}
 .ta1 th{
 	width: 100px;
 	padding: 5px;

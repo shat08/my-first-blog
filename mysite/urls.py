@@ -3,7 +3,7 @@ from django.contrib.sitemaps import Sitemap
 from django.contrib.sitemaps.views import sitemap
 from django.shortcuts import resolve_url
 from django.urls import path, include
-from blog.models import Post
+from pdfmr.models import Post
 
 app_name ="pdfmr"
 
@@ -22,6 +22,7 @@ urlpatterns = [
     path('top', include('pdfmr.urls')),
     path('link', include('pdfmr.urls')),#追加
     path('about', include('pdfmr.urls')),#追加
+    path('post', include('pdfmr.urls')),#追加
 
     path('giants',include('pdfmr.urls')),
     path('tigers',include('pdfmr.urls')),

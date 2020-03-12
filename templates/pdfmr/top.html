@@ -32,23 +32,18 @@
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
 <ul class="inner">
-<li class="current"><a href="">ホーム<span>HOME</span></a></li>
-<!-- <li><a href="company.html">会社概要<span>COMPANY</span></a></li>
-<li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
-<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
+<li class="current"><a href="top">ホーム<span>HOME</span></a></li>
+<li><a href="post">投稿<span>POST</span></a></li>
 <li><a href="link">リンク<span>LINK</span></a></li>
-<li><a href="about">このサイトについて<span>ABOUT</span></a></li>
+
 </ul>
 </nav>
 <!--小さな端末用（800px以下端末）メニュー-->
 <nav id="menubar-s" style="display: none;">
 <ul>
-<li><a href="">ホーム<span>HOME</span></a></li>
-<!-- <li><a href="company.html">会社概要<span>COMPANY</span></a></li>
-<li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
-<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
+<li><a href="top">ホーム<span>HOME</span></a></li>
+<li><a href="post">投稿<span>POST</span></a></li>
 <li><a href="link">リンク<span>LINK</span></a></li>
-<li><a href="about">このサイトについて<span>ABOUT</span></a></li>
 </ul>
 </nav>
 
@@ -70,14 +65,22 @@
 <section id="new">
 <h2>更新情報・お知らせ</h2>
 <dl>
+	{% block content %}
+	{% for post in posts %}
+		<dt>{{ post.created_day }}</dt>
+        <dd><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></dd>
+        <!-- <p>{{ post.text|linebreaksbr }}</p> -->
+	{% endfor %}
+	{% endblock %}
+	<!--
 	<dt>2019/3/8</dt>
 	<dd>サイトマップ登録。<span class="newicon">NEW</span></dd>
 	<dt>2019/3/2</dt>
 	<dd>全球団応援歌歌詞の投稿完了。</dd>
 	<dt>2019/2/16</dt>
-	<dd>ホームページ作成開始。</dd>
+	<dd>ホームページ作成開始。</dd>-->
 </dl>
-<p class="r">»&nbsp;<a href="#">過去ログ</a></p>
+<p class="r">»&nbsp;<a href="post">過去ログ</a></p>
 </section>
 
 <section>
@@ -235,52 +238,15 @@ TEL：03-0000-0000<br>
 </div>
 <!--/#contents-->
 
-<!--
+
 <footer>
 
-<div id="footermenu" class="inner">
-<ul>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-</ul>
-<ul>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-</ul>
-<ul>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-</ul>
-<ul>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-</ul>
-<ul>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-<li><a href="#">メニューサンプル</a></li>
-</ul>
+
+<div id="footermenu" class="inner">	
+	<ul>
+	<small><a href="about">このサイトについて</a></small>
+	</ul>
 </div>
--->
 <!--/footermenu-->
 
 <div id="copyright">

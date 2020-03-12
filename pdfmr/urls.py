@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
-app_name ="pdfmr"
+#app_name ="pdfmr"
 #ここから追加
 
 
@@ -15,6 +15,8 @@ urlpatterns = [
     path('top', views.top, name='top'),
     path('link', views.link, name='link'),#追加
     path('about', views.about, name='about'),#追加
+    path('post', views.post, name='post'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 
     path('giants', views.giants, name='giants'),
     path('tigers', views.tigers, name='tigers'),

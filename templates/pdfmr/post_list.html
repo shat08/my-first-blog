@@ -1,10 +1,10 @@
 {% load staticfiles %} 
 <!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="ja"><head>
+	<meta name="google-site-verification" content="7RsACZpyYjXeBd4lnNW_G9iDdkee7P4Q1toGa3vkOo0" />
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>リンク</title>
+<title>投稿</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
@@ -18,36 +18,33 @@
 <![endif]-->
 </head>
 
-<body>
+<body class="">
 
 <header>
-	<div class="inner">
-	<h1 id="logo"><a href="top"><img src="{% static 'images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
-	<div id="contact">
-	<!--<p class="tel">TEL:00-0000-0000<span>受付：00:00〜00:00　定休日：水曜日</span></p>-->
-	</div>
-	</div>
+<div class="inner">
+<h1 id="logo"><a href="top"><img src="{% static 'images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
+<div id="contact">
+<!-- <p class="tel">TEL:00-0000-0000<span>受付：00:00〜00:00　定休日：水曜日</span></p> -->
+</div>
+</div>
 </header>
 
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
-	<ul class="inner">
-		<li><a href="top">ホーム<span>HOME</span></a></li>
-		<!--<li><a href="company.html">会社概要<span>COMPANY</span></a></li>
-		<li><a href="service.html">製品紹介<span>SERVICE</span></a></li>
-		<li><a href="recruit.html">採用情報<span>RECRUIT</span></a></li> -->
-		<li><a href="post">投稿<span>POST</span></a></li>
-		<li class="current"><a href="link">リンク<span>LINK</span></a></li>
-		
-		</ul>
-		</nav>
-		<!--小さな端末用（800px以下端末）メニュー-->
-		<nav id="menubar-s" style="display: none;">
-		<ul>
-		<li><a href="top">ホーム<span>HOME</span></a></li>
-		<li><a href="post">投稿<span>POST</span></a></li>
-		<li><a href="link">リンク<span>LINK</span></a></li>
-		</ul>
+<ul class="inner">
+<li><a href="top">ホーム<span>HOME</span></a></li>
+<li class="current"><a href="post">投稿<span>POST</span></a></li>
+<li><a href="link">リンク<span>LINK</span></a></li>
+
+</ul>
+</nav>
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s" style="display: none;">
+<ul>
+<li><a href="top">ホーム<span>HOME</span></a></li>
+<li><a href="post">投稿<span>POST</span></a></li>
+<li><a href="link">リンク<span>LINK</span></a></li>
+</ul>
 </nav>
 
 <div id="contents" class="inner">
@@ -55,62 +52,30 @@
 
 <div id="main">
 
+
+<section id="new">
+	
+<h2>更新情報・お知らせ</h2>
+<dl>
+	{% block content %}
+	{% for post in posts %}
+		<dt>{{ post.created_day }}</dt>
+        <dd><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></dd>
+        <!-- <p>{{ post.text|linebreaksbr }}</p> -->
+	{% endfor %}
+	{% endblock %}
+	<!--
+	<dt>2019/3/8</dt>
+	<dd>サイトマップ登録。<span class="newicon">NEW</span></dd>
+	<dt>2019/3/2</dt>
+	<dd>全球団応援歌歌詞の投稿完了。</dd>
+	<dt>2019/2/16</dt>
+	<dd>ホームページ作成開始。</dd> -->
+</dl>
+<p class="r">»&nbsp;<a href="#">過去ログ</a></p>
+</section>
+
 <section>
-
-<h2>リンク</h2>
-<p>リンクのご案内。</p>
-
-<table class="ta1">
-<caption>球団・応援団サイト</caption>
-<tr>
-<th><a href="https://chunichiouendan.wixsite.com/dragonsouendan">中日ドラゴンズ応援団</a></th>
-<td>中日ドラゴンズ応援団のホームページです。</td>
-</tr>
-<tr>
-<th><a href="http://tsubamegundan.com">全国ツバメ軍団</a></th>
-<td>東京ヤクルトスワローズ私設応援団のホームページです。</td>
-</tr>
-<tr>
-<th><a href="https://www.seihanet.com">全国星覇会</a></th>
-<td>横浜DeNAベイスターズ私設応援団のホームページです。</td>
-</tr>
-<tr>
-<th><a href="http://hiroshimao-en.com">全国広島東洋カープ私設応援団連盟</a></th>
-<td>全国広島東洋カープ私設応援団連盟のホームページです。</td>
-</tr>
-<tr>
-<th><a href="http://tigers-hm.info">ヒッティングマーチ委員会</a></th>
-<td>阪神タイガース応援団のホームページです。</td>
-</tr>
-<tr>
-<th><a href="https://www.giants.jp/top.html">読売巨人軍</a></th>
-<td>読売巨人軍の公式サイトです。</td>
-</tr>
-<tr>
-<th><a href="https://www.fighters.co.jp/company/cheer_player/">北海道日本ファムファイターズ</a></th>
-<td>北海道日本ハムファターズの公式サイトです。</td>
-</tr>
-<tr>
-<th><a href="https://www.buffaloes.co.jp/team/playerssong.html">オリックスバファローズ</a></th>
-<td>オリックスバファローズの公式サイトです。</td>
-</tr>
-<tr>
-	<th><a href="https://sp.softbankhawks.co.jp/team/song/index.html">福岡ソフトバンクホークス</a></th>
-	<td>福岡ソフトバンクホークスの公式サイトです。</td>
-</tr>
-<tr>
-	<th><a href="https://sp.softbankhawks.co.jp/team/song/index.html">福岡ソフトバンクホークス</a></th>
-	<td>福岡ソフトバンクホークスの公式サイトです。</td>
-</tr>
-<tr>
-	<th><a href="http://wakajishi-seibulions.com">若獅子会</a></th>
-	<td>埼玉西武ライオンズ応援団のホームページです。</td>
-</tr>
-<tr>
-	<th><a href="https://www.marines.co.jp/team/supportersong/index.html">千葉ロッテマリーンズ</a></th>
-	<td>千葉ロッテマリーンズの公式サイトです。</td>
-</tr>
-</table>
 
 </section>
 
@@ -140,16 +105,50 @@
 	<li><a href="marines">ロッテ</a></li>
 	<li><a href="fighters">日本ハム</a></li>
 	<li><a href="buffaloes">オリックス</a></li>
-	</ul>
+</ul>
 </nav>
 
 <section>
 
+<!--
+<h2>製品情報</h2>
 
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル<span class="newicon">NEW</span></h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
 
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg'%}" alt="写真の説明"></figure>
+<h4>製品タイトル</h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル</h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
+-->
 </section>
+<!--
+<div class="box1">
+<h2>アクセス</h2>
+<p>東京都XX区XXXXビル３F<br>
+TEL：03-0000-0000<br>
+受付：9:00～16:00<br>
+定休日：土日祝</p>
+</div>
+-->
 
-
+</div>
 <!--/#sub-->
 
 </div>
@@ -159,8 +158,51 @@
 
 <section>
 
+<!--
+<h2>製品情報</h2>
+
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル<span class="newicon">NEW</span></h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル</h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル</h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル</h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
+
+<div class="list">
+<a href="service2.html">
+<figure><img src="{% static 'templates2/images/sample1.jpg' %}" alt="写真の説明"></figure>
+<h4>製品タイトル</h4>
+<p>サンプルテキスト。サンプルテキスト。</p>
+</a>
+</div>
 
 </section>
+-->
 
 <nav>
 <!--
@@ -172,19 +214,25 @@
 <li><a href="#">メニューサンプル</a></li>
 <li><a href="#">メニューサンプル</a></li>
 </ul>
-
--->
 </nav>
 
+<p>
+<a href="recruit.html"><img src="{% static 'templates2/images/banner1.jpg' %}" alt="採用情報" class="pc"></a>
+<a href="recruit.html"><img src="{% static 'templates2/images/banner1_sh.jpg' %}" alt="採用情報" class="sh"></a>
+</p>
+<p>上のバナー画像は、801px以上の端末と800px以下とで画像２種類が切り替わります。<br>
+<a href="company.html#banner">詳しい説明はこちら。</a></p>
 
 </div>
+-->
 <!--/#side-->
 
 </div>
 <!--/#contents-->
 
-<footer>
 <!--
+<footer>
+
 <div id="footermenu" class="inner">
 <ul>
 <li><a href="#">メニューサンプル</a></li>
@@ -231,11 +279,11 @@
 <!--/footermenu-->
 
 <div id="copyright">
-<small>Copyright&copy; <a href="top">プロ野球選手 応援歌</a> All Rights Reserved.</small>
+<small>Copyright© <a href="top">プロ野球選手 応援歌</a> All Rights Reserved.</small>
 <span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </div>
 
-</footer>
+</footer> 
 
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
 
@@ -255,5 +303,6 @@ if (OCwindowWidth() <= 800) {
 }
 </script>
 
-</body>
-</html>
+
+
+</body></html>

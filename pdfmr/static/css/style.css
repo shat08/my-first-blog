@@ -434,12 +434,12 @@ footer .pr {display: block;font-size: 80%;}
 /*日付設定*/
 #new dt {
 	float: left;
-	width: 9em;
+	width: 11em;
 	letter-spacing: 0.1em;
 }
 /*記事設定*/
 #new dd {
-	padding-left: 9em;
+	padding-left: 11em;
 	border-bottom: 1px solid #eee;	/*下線の幅、線種、色*/
 }
 

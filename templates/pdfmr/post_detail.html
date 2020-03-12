@@ -22,7 +22,7 @@
 
 <header>
 <div class="inner">
-<h1 id="logo"><a href="top"><img src="{% static 'images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
+<h1 id="logo"><a href="{% url 'top' %}"><img src="{% static 'images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
 <div id="contact">
 <!-- <p class="tel">TEL:00-0000-0000<span>受付：00:00〜00:00　定休日：水曜日</span></p> -->
 </div>
@@ -32,17 +32,17 @@
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
 <ul class="inner">
-    <li><a href="top">ホーム<span>HOME</span></a></li>
-    <li><a href="post">投稿<span>POST</span></a></li>
-    <li><a href="link">リンク<span>LINK</span></a></li>
+    <li><a href="{% url 'top' %}">ホーム<span>HOME</span></a></li>
+    <li class="current"><a href="{% url 'post' %}">投稿<span>POST</span></a></li>
+    <li><a href="{% url 'link' %}">リンク<span>LINK</span></a></li>
     </ul>
     </nav>
     <!--小さな端末用（800px以下端末）メニュー-->
     <nav id="menubar-s" style="display: none;">
     <ul>
-    <li><a href="top">ホーム<span>HOME</span></a></li>
-    <li><a href="post">投稿<span>POST</span></a></li>
-    <li><a href="link">リンク<span>LINK</span></a></li>
+    <li><a href="{% url 'top' %}">ホーム<span>HOME</span></a></li>
+    <li><a href="{% url 'post' %}">投稿<span>POST</span></a></li>
+    <li><a href="{% url 'link' %}">リンク<span>LINK</span></a></li>
 </ul>
 </nav>
 
@@ -60,7 +60,7 @@
         最終更新：{{ post.published_day }}
     </p>
     <p>{{ post.text|linebreaksbr }}</p>
-    <p class="r">»&nbsp;<a href="#">過去ログ</a></p>
+    <p class="r">»&nbsp;<a href="{% url 'post' %}">戻る</a></p>
     </section>
     
     <section>
@@ -75,24 +75,24 @@
     <nav>
         <h2>セ・リーグ</h2>
         <ul class="submenu">
-        <li><a href="giants">巨人</a></li>
-        <li><a href="baystars">DeNA</a></li>
-        <li><a href="tigers">阪神</a></li>
-        <li><a href="carp">広島</a></li>
-        <li><a href="dragons">中日</a></li>
-        <li><a href="swallows">ヤクルト</a></li>
+        <li><a href="{% url 'giants' %}">巨人</a></li>
+        <li><a href="{% url 'baystars' %}">DeNA</a></li>
+        <li><a href="{% url 'tigers' %}">阪神</a></li>
+        <li><a href="{% url 'carp' %}">広島</a></li>
+        <li><a href="{% url 'dragons' %}">中日</a></li>
+        <li><a href="{% url 'swallows' %}">ヤクルト</a></li>
         </ul>
         </nav>
         
         <nav>
         <h2>パ・リーグ</h2>
         <ul class="submenu">
-        <li><a href="lions">西武</a></li>
-        <li><a href="hawks">ソフトバンク</a></li>
-        <li><a href="eagles">楽天</a></li>
-        <li><a href="marines">ロッテ</a></li>
-        <li><a href="fighters">日本ハム</a></li>
-        <li><a href="buffaloes">オリックス</a></li>
+        <li><a href="{% url 'lions' %}">西武</a></li>
+        <li><a href="{% url 'hawks' %}">ソフトバンク</a></li>
+        <li><a href="{% url 'eagles' %}">楽天</a></li>
+        <li><a href="{% url 'marines' %}">ロッテ</a></li>
+        <li><a href="{% url 'fighters' %}">日本ハム</a></li>
+        <li><a href="{% url 'buffaloes' %}">オリックス</a></li>
     </ul>
     </nav>
     
@@ -267,7 +267,7 @@
     <!--/footermenu-->
     
     <div id="copyright">
-    <small>Copyright© <a href="top">プロ野球選手 応援歌</a> All Rights Reserved.</small>
+    <small>Copyright© <a href="{% url 'top' %}">プロ野球選手 応援歌</a> All Rights Reserved.</small>
     <span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
     </div>
     

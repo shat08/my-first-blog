@@ -12,11 +12,12 @@ from . import views
 
 urlpatterns = [
     path('', views.top, name='top'),
-    path('top', views.top, name='top'),
+    #path('top', views.top, name='top'),
     path('link', views.link, name='link'),#追加
     path('about', views.about, name='about'),#追加
     path('post', views.post, name='post'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    
 
     path('giants', views.giants, name='giants'),
     path('tigers', views.tigers, name='tigers'),

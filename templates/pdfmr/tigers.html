@@ -23,14 +23,14 @@
 
 <header>
 	<div class="inner">
-	<h1 id="logo"><a href="top"><img src="{% static 'images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
+	<h1 id="logo"><a href="{% url 'top' %}"><img src="{% static 'images/logo.png' %}" alt="SAMPLE COMPANY"></a></h1>
 	</div>
 </header>
 
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
 	<ul class="inner">
-		<li><a href="top">ホーム<span>HOME</span></a></li>
+		<li><a href="{% url 'top' %}">ホーム<span>HOME</span></a></li>
 		<li><a href="post">投稿<span>POST</span></a></li>
 		<li><a href="link">リンク<span>LINK</span></a></li>
 		</ul>
@@ -38,7 +38,7 @@
 		<!--小さな端末用（800px以下端末）メニュー-->
 		<nav id="menubar-s" style="display: none;">
 		<ul>
-		<li><a href="top">ホーム<span>HOME</span></a></li>
+		<li><a href="{% url 'top' %}">ホーム<span>HOME</span></a></li>
 		<li><a href="post">投稿<span>POST</span></a></li>
 		<li><a href="link">リンク<span>LINK</span></a></li>
 	</ul>
@@ -242,7 +242,7 @@
 
 
 <div id="copyright">
-<small>Copyright&copy; <a href="top">プロ野球選手 応援歌</a> All Rights Reserved.</small>
+<small>Copyright&copy; <a href="{% url 'top' %}">プロ野球選手 応援歌</a> All Rights Reserved.</small>
 <span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </div>
 
